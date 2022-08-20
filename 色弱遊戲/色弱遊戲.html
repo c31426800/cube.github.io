@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(206, 136, 136);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #plate {
+            width: 530px;
+            height: 530px;
+            background-color: rgb(255, 249, 249);
+            margin: auto;
+            border-radius: 15px;
+            /* display: flex; */
+            flex-wrap: wrap;
+            padding: 15px;
+            gap: 15px;
+            display: none;
+
+        }
+
+        #plate.act {
+            display: flex;
+        }
+
+        .box {
+            flex-grow: 1;
+            width: 242px;
+            height: 242px;
+            background-color: rgb(94, 33, 86);
+            border-radius: 15px;
+        }
+
+        .answer {
+            opacity: 0.8;
+        }
+
+        .score {
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(202, 179, 184);
+            border-radius: 15px;
+            font-size: 36px;
+            text-align: center;
+            line-height: 100px;
+            display: none;
+            margin-top: 35px;
+        }
+
+        .score.act {
+            display: block;
+        }
+
+        .start-game {
+            margin: auto;
+            background-color: bisque;
+            padding: 30px 50px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .time {
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+            margin: 10px;
+            display: none;
+            color: red;
+            font-weight: 800;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+           
+        }
+
+        .time.act {
+            display: block;
+        }
+        .agin{
+            width:100px ;
+            height: 100px;
+            background-color: rgb(202, 179, 184);
+            border-radius: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start-game" onclick="">開始遊戲</div>
+    <div class="score">0</div>
+    <div id="plate"></div>
+    <div class="time">
+        <span id="second"></span>
+    </div>
+    <div class="agin" onclick="reset()"><span>重新開始</span></div>
+
+
+
+</body>
+<script src="./cube.js"></script>
+
+</html>
