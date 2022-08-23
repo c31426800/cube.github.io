@@ -81,9 +81,11 @@ const time = document.querySelector('.time')
 startGame.addEventListener('click', function () {
 	plate.classList.add('act')
 	scoreConten.classList.add('act')
+	// agin.classList.add('agin-1')
 	startGame.style.display = 'none'
+
 	time.style.display = 'flex'
-	timerElement.innerText = 60;
+	timerElement.innerText = 10;
 	score = 0;
 	gameTimer = setInterval(function () {
 		console.log(timerElement.innerText);
@@ -95,7 +97,7 @@ startGame.addEventListener('click', function () {
 			timerElement.innerText = 1
 			// startGame.innerHTML = 'again'
 			startGame.style.display = 'block'
-			
+			agin.classList.remove('agin-1')
 		}
 		timerElement.innerText = parseInt(timerElement.innerText) - 1
 	}, 1000);
