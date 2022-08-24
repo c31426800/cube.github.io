@@ -85,7 +85,7 @@ startGame.addEventListener('click', function () {
 	startGame.style.display = 'none'
 
 	time.style.display = 'flex'
-	timerElement.innerText = 10;
+	timerElement.innerText = 60;
 	score = 0;
 	gameTimer = setInterval(function () {
 		console.log(timerElement.innerText);
