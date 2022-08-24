@@ -92,7 +92,7 @@ startGame.addEventListener('click', function () {
 	}, 1000);
 
 })
-agin.addEventListener('click', function(){
+startGame.addEventListener('click', function(){
 	reset()
 	plate.classList.add('act')
 	
