@@ -69,7 +69,7 @@ startGame.addEventListener('click', function () {
 	startGame.style.display = 'none'
 	time.style.display = 'flex'
 
-	// timerElement.innerText = 60;
+	 timerElement.innerText = 60;
 	score = 0;
 		const scorePanel = document.querySelector('.score')
 	scorePanel.innerHTML = score
