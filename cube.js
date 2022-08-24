@@ -71,7 +71,7 @@ startGame.addEventListener('click', function () {
 
 	 timerElement.innerText = 60;
 	score = 0;
-		const scorePanel = document.querySelector('.score')
+	const scorePanel = document.querySelector('.score')
 	scorePanel.innerHTML = score
 
 
@@ -95,6 +95,7 @@ startGame.addEventListener('click', function () {
 startGame.addEventListener('click', function(){
 	reset()
 	plate.classList.add('act')
+	
 	
 	
 })
