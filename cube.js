@@ -47,29 +47,11 @@ function reset() {
 
 
 	}
-	//撈出我們4個box
-	// const boxes = document.querySelectorAll('.box')
-	// console.log(boxes)
-	//骰骰子 取的0~3亂數
-	//加入答案
-	// boxes.forEach(function (box, index) {
-		
-	// 	if (index == randomnumber) {
-	// 		box.classList.add('answer')
-	// 	}
-	// })
-	// boxes.forEach(function (box) {
-	// 	box.addEventListener('click', function () {
-	// 		if (box.classList.contains('answer')) {
-	// 			reset()
-	// 		}
-	// 	})
-	// })
-	if(score %3 ==0){
-		
-	if(level<=7){
-		level++
-	}
+	
+	if(score %3 ==0){	
+		if(level<=7){
+			level++
+		}
 	}
 
 }
@@ -79,14 +61,21 @@ const startGame = document.querySelector('.start-game')
 const time = document.querySelector('.time')
 
 startGame.addEventListener('click', function () {
+	
+	score = 0;
 	plate.classList.add('act')
 	scoreConten.classList.add('act')
 	// agin.classList.add('agin-1')
 	startGame.style.display = 'none'
-
 	time.style.display = 'flex'
+
 	timerElement.innerText = 60;
 	score = 0;
+		const scorePanel = document.querySelector('.score')
+	scorePanel.innerHTML = score
+
+
+
 	gameTimer = setInterval(function () {
 		console.log(timerElement.innerText);
 		
